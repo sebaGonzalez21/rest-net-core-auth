@@ -18,7 +18,8 @@ namespace ProyectoTest.Dummy
         // users hardcoded for simplicity, store in a db with hashed passwords in production applications
         private List<UserDto> _usersList = new List<UserDto>
         {
-            new UserDto { Id = 1, FirstName = "Test", LastName = "User", Username = "test", Password = "test" }
+            new UserDto { Id = 1, FirstName = "Test", LastName = "User", Username = "test", Password = "test" },
+            new UserDto { Id = 1, FirstName = "Test", LastName = "User", Username = "test", Password = null }
         };
 
         public UserDummy(IConfiguration configuration) {
