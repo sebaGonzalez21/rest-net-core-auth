@@ -93,7 +93,8 @@ namespace ProyectoTest.Dummy
                 {
                     Subject = new ClaimsIdentity(new Claim[]
                     {
-                     new Claim(ClaimTypes.Name, userDto.Id.ToString())
+                     new Claim(ClaimTypes.Name, userDto.Username.ToString()),
+                     new Claim(ClaimTypes.PrimarySid, userDto.Id.ToString())
                     }),
                     Expires = DateTime.UtcNow.AddMinutes(15),
                     SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
